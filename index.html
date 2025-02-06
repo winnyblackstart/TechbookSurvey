@@ -74,6 +74,10 @@
                 <label><input type="radio" name="q7" value="yes" required> Yes/Oui</label>
                 <label><input type="radio" name="q7" value="no"> No/Non</label>
             </div>
+            <div class="question">
+                <p>En - 8) Do you have any comments or suggestions?<br>Fr - 8) Avez-vous des commentaires ou des suggestions ?</p>
+                <input type="text" name="q8" placeholder="Optional / Facultatif"> Frs
+            </div>
             <button type="submit">Submit Answers</button>
         </form>
     </div>
@@ -100,6 +104,10 @@
                 <p>En - 3) Will you encourage your parents to pay subscription?<br>Fr - 3) Allez-vous encourager vos parents à souscrire un abonnement ?</p>
                 <label><input type="radio" name="q3" value="yes" required> Yes/Oui</label>
                 <label><input type="radio" name="q3" value="no"> No/Non</label>
+            </div>
+            <div class="question">
+                <p>En - 4) Do you have any comments or suggestions?<br>Fr - 4) Avez-vous des commentaires ou des suggestions ?</p>
+                <input type="text" name="q4" placeholder="Optional / Facultatif"> Frs
             </div>
             <button type="submit">Submit Answers</button>
         </form>
@@ -177,6 +185,7 @@
             q5: formData.get('q5'),
             q6: Number(formData.get('q6')),
             q7: formData.get('q7'),
+            q8: formData.get('q8'),
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         }));
     });
@@ -190,9 +199,10 @@
             q1: formData.get('q1'),
             q2: formData.get('q2'),
             q3: formData.get('q3'),
+            q4: formData.get('q4'),
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         }));
     });
 </script>
 </body>
-</html>
+    </html>
